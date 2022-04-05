@@ -1,1 +1,3 @@
-println "Hello from task3.groovy"
+def call(String name = 'User') {
+	echo "Welcome, ${name}."
+}
