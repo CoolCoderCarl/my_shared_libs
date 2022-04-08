@@ -16,8 +16,8 @@ pipeline {
     post {
         always { 
             echo 'POST'
-            // print($currentBuild.displayName)
-            // print($currentBuild.description)
+            currentBuild.displayName
+            currentBuild.description
         }
     }
 }
