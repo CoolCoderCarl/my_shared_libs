@@ -17,11 +17,11 @@ pipeline {
                 echo "FirstFreestyleJob.getResult()"
                 echo "SecondFreestyleJob.getResult()"
                 
-                def ffj = build('FirstFreestyleJob', wait: true)
-                def result_ffj = b.result
+//                def ffj = build('FirstFreestyleJob', wait: true)
+//                def result_ffj = b.result
                 
-                def sfj = build('SecondFreestyleJob', wait: true)
-                def result_sfj = b.result        
+//                def sfj = build('SecondFreestyleJob', wait: true)
+//                def result_sfj = b.result        
         }
     }
 }
