@@ -16,8 +16,6 @@ pipeline {
     post {
         always { 
             echo 'POST'
-            currentBuild.displayName
-            currentBuild.description
         }
     }
 }
