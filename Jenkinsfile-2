@@ -6,16 +6,18 @@ pipeline {
                 echo "${JOB_NAME}"
             }
         }
-        stage('Return downstream info') {
+        stage('Build downstreams jobs') {
             steps {
-                echo "Jenkins URL is - ${JENKINS_URL}"
+                build 'FirstFreestyleJob'
+                build 'SecondFreestyleJob'
             }
         }
     }
     post {
         always { 
-            print($currentBuild.displayName)
-            print($currentBuild.description)
+            echo 'POST'
+            // print($currentBuild.displayName)
+            // print($currentBuild.description)
         }
     }
 }
