@@ -8,14 +8,20 @@ pipeline {
         }
         stage('Return downstream info') {
             steps {
-                echo "${FirstFreestyleJob.getResult()}"
-                echo "${SecondFreestyleJob.getResult()}"
+                echo "Jenkins URL is - ${JENKINS_URL}"
             }
         }
     }
     post {
         always { 
-            echo "Jenkins URL is - ${JENKINS_URL}"
+                echo "FirstFreestyleJob.getResult()"
+                echo "SecondFreestyleJob.getResult()"
+                
+                def ffj = build('FirstFreestyleJob', wait: true)
+                def result_ffj = b.result
+                
+                def sfj = build('SecondFreestyleJob', wait: true)
+                def result_sfj = b.result        
         }
     }
 }
