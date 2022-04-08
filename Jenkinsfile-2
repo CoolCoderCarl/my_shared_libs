@@ -1,0 +1,15 @@
+pipeline {
+    agent any 
+    stages {
+        stage('Test stage') {
+            steps {
+                echo "${JOB_NAME}"
+            }
+        }
+    }
+    post {
+        always { 
+            echo "Jenkins URL is - ${JENKINS_URL}"
+        }
+    }
+}
