@@ -14,16 +14,8 @@ pipeline {
     }
     post {
         always { 
-                ffj = FirstFreestyleJob.getResult()
-                print(ffj)
-                sfj = SecondFreestyleJob.getResult()
-                print(sfj)
-                
-//                def ffj = build('FirstFreestyleJob', wait: true)
-//                def result_ffj = b.result
-                
-//                def sfj = build('SecondFreestyleJob', wait: true)
-//                def result_sfj = b.result        
+            echo 'currentBuild.displayName'
+            echo 'currentBuild.description'
         }
     }
 }
