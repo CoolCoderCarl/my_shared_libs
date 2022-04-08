@@ -14,8 +14,8 @@ pipeline {
     }
     post {
         always { 
-            print(${currentBuild.displayName})
-            echo(${currentBuild.description})
+            print($currentBuild.displayName)
+            print($currentBuild.description)
         }
     }
 }
