@@ -14,8 +14,10 @@ pipeline {
     }
     post {
         always { 
-                echo "FirstFreestyleJob.getResult()"
-                echo "SecondFreestyleJob.getResult()"
+                ffj = FirstFreestyleJob.getResult()
+                print(ffj)
+                sfj = SecondFreestyleJob.getResult()
+                print(sfj)
                 
 //                def ffj = build('FirstFreestyleJob', wait: true)
 //                def result_ffj = b.result
