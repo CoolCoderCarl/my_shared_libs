@@ -8,7 +8,8 @@ pipeline {
         }
         stage('Return downstream info') {
             steps {
-                echo "${myjob.getResult()}"
+                echo "${FirstFreestyleJob.getResult()}"
+                echo "${SecondFreestyleJob.getResult()}"
             }
         }
     }
