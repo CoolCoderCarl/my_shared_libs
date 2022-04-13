@@ -12,6 +12,16 @@ pipeline {
                 build 'SecondFreestyleJob'
             }
         }
+        stage('Build downstreams jobs') {
+            steps {
+                echo 'Env var 1'
+            }
+        }
+        stage('Build downstreams jobs') {
+            steps {
+                echo 'Env var 2'
+            }
+        }
     }
     post {
         always { 
