@@ -1,4 +1,4 @@
-package test.script
+// package test.script
 
 def printText(text) {
   print(text)
