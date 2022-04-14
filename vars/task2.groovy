@@ -12,6 +12,7 @@ def call() {
 
             stage('Build SecondFreestyleJob job') {
               sfj = build job: 'SecondFreestyleJob'
+              echo ffj.getBuildVariables().toString()
             }            
             
             stage('Env Var One') {
