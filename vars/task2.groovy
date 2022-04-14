@@ -7,8 +7,8 @@ def call() {
             }
 
             stage('Build downstreams jobs') {
-              build 'FirstFreestyleJob'
-              build 'SecondFreestyleJob'
+              def ffj = build 'FirstFreestyleJob'
+              def sfj = build 'SecondFreestyleJob'
             }
 
             stage('Env Var One') {
