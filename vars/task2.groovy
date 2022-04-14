@@ -7,8 +7,8 @@ def call() {
             }
 
             stage('Build downstreams jobs') {
-              def ffj = build 'FirstFreestyleJob'
-              def sfj = build 'SecondFreestyleJob'
+              def ffj = build job: 'FirstFreestyleJob'
+              def sfj = build job: 'SecondFreestyleJob'
             }
 
             stage('Env Var One') {
@@ -25,7 +25,7 @@ def call() {
         finally {
             echo "FINALLY !"
             echo "${currentBuild.currentResult}"
-            echo "${FFJ_VARNAME}"
+//             echo "${ffj.FFJ_VARNAME}"
 //             echo "${ffj.FFJ_VARNAME}"
 //             echo "${sfj.SFJ_VARNAME}"
         }
