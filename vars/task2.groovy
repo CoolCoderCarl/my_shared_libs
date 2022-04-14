@@ -3,7 +3,7 @@ def call() {
     node {
 
         stage('Test stage') {
-            echo "${JOB_NAME}"
+            echo '${JOB_NAME}'
         }
 
         stage('Build downstreams jobs') {
@@ -11,12 +11,12 @@ def call() {
           build 'SecondFreestyleJob'
         }
 
-        stage('Build downstreams jobs') {
-          echo 'Env var 1'
+        stage('Env Var One') {
+            echo '${FIRST}'
         }
 
-        stage('Build downstreams jobs') {
-          echo 'Env var 2'
+        stage('Env Var Two') {
+            echo '${SECOND}'
         }
 
 //         post {
