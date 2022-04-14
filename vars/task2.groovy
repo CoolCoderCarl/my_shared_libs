@@ -12,7 +12,6 @@ def call() {
 
             stage('Build SecondFreestyleJob job') {
               sfj = build job: 'SecondFreestyleJob'
-              echo ffj.getBuildVariables().toString()
             }            
             
             stage('Env Var One') {
@@ -31,8 +30,8 @@ def call() {
         finally {
             echo "FINALLY !"
             echo "${currentBuild.currentResult}"      
-            echo "${ffj.currentResult}"
-            echo "${sfj.currentResult}"
+            echo "${ffj.getBuildVariables().JOB_NAME} is ${ffj.currentResult}"
+            echo "${sfj.getBuildVariables().JOB_NAME} is ${sfj.currentResult}"
         }
     }
 }
