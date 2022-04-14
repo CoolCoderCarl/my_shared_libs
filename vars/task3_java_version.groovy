@@ -1,7 +1,7 @@
 def call() {
     node {
         
-        stage ('Default JAVA'){
+        stage ('JAVA Default'){
             echo "${env.JAVA_HOME}"
             sh "java -version"
         }
