@@ -2,15 +2,18 @@ def call() {
 
     node {
         try {
-            stage('Test stage') {
-                echo "${JOB_NAME}"
+            stage('Show current job name') {
+                echo "Current job name - ${JOB_NAME}"
             }
 
-            stage('Build downstreams jobs') {
+            stage('Build FirstFreestyleJob job') {
               ffj = build job: 'FirstFreestyleJob'
-              sfj = build job: 'SecondFreestyleJob'
             }
 
+            stage('Build SecondFreestyleJob job') {
+              sfj = build job: 'SecondFreestyleJob'
+            }            
+            
             stage('Env Var One') {
                 echo "${FIRST}"
                 echo ffj.getBuildVariables().FFJ_VARNAME                
