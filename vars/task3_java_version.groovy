@@ -1,5 +1,12 @@
 def call() {
-  env.JAVA_HOME="${tool 'jdk_11'}"
-  env.PATH="${env.JAVA_HOME}/bin:${env.PATH}"
-  sh 'java -version'
+    echo "${env.JAVA_HOME}"
+    sh "java -version"
+    
+    env.JAVA_HOME="${tool 'jdk_11'}/jdk-11/bin/"
+    echo "${env.JAVA_HOME}"
+    sh "${env.JAVA_HOME}/java -version"
+    
+    env.JAVA_HOME="${tool 'jdk_16'}/jdk-16/bin/"
+    echo "${env.JAVA_HOME}"
+    sh "${env.JAVA_HOME}/java -version"
 }
