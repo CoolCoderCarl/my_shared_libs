@@ -1,4 +1,3 @@
-def t = new test.script.Task3()
+def t = new Task3()
 
 t.printText('test')
-
