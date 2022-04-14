@@ -25,7 +25,7 @@ def call() {
         finally {
             echo "FINALLY !"
             echo "${currentBuild.currentResult}"
-//             echo "${ffj.FFJ_VARNAME}"
+            echo "${ffj.FFJ_VARNAME}"
 //             echo "${ffj.FFJ_VARNAME}"
 //             echo "${sfj.SFJ_VARNAME}"
         }
