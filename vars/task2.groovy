@@ -25,6 +25,8 @@ def call() {
         finally {
             echo "FINALLY !"
             echo "${currentBuild.currentResult}"
+            echo "${ffj.currentResult}"
+            echo "${sfj.currentResult}"
         }
     }
 }
