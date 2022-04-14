@@ -29,9 +29,9 @@ def call() {
         }
         finally {
             echo "FINALLY !"
-            echo "Current job is ${currentBuild.currentResult}"      
-            echo "${ffj.getBuildVariables().JOB_NAME} is ${ffj.currentResult}"
-            echo "${sfj.getBuildVariables().JOB_NAME} is ${sfj.currentResult}"
+            echo "Current job status is ${currentBuild.currentResult}"      
+            echo "Job ${ffj.getBuildVariables().JOB_NAME} status is ${ffj.currentResult}"
+            echo "Job ${sfj.getBuildVariables().JOB_NAME} status is ${sfj.currentResult}"
         }
     }
 }
