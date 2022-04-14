@@ -13,10 +13,12 @@ def call() {
 
             stage('Env Var One') {
                 echo "${FIRST}"
+                echo ffj.getBuildVariables().FFJ_VARNAME                
             }
 
             stage('Env Var Two') {
                 echo "${SECOND}"
+                echo sfj.getBuildVariables().SFJ_VARNAME                      
             }
         }
         catch (e) {
@@ -24,8 +26,7 @@ def call() {
         }
         finally {
             echo "FINALLY !"
-            echo "${currentBuild.currentResult}"
-            echo ffj.getBuildVariables().FFJ_VARNAME
+            echo "${currentBuild.currentResult}"      
 //             echo "${ffj.FFJ_VARNAME}"
 //             echo "${sfj.SFJ_VARNAME}"
         }
