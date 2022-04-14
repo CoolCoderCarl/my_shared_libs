@@ -1,4 +1,4 @@
-// def call() {
+def call() {
     node {
         
         stage ('JAVA Default'){
@@ -18,4 +18,4 @@
             sh "${env.JAVA_HOME}/java -version"
         }
     }
-// }
+}
