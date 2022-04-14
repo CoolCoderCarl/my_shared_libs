@@ -24,6 +24,7 @@ def call() {
         }
         finally {
             echo "FINALLY !"
+            echo "${currentBuild.currentResult}"
         }
     }
 }
