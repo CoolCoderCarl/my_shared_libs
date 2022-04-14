@@ -1,3 +1,6 @@
-def t = new Task3()
-
-t.printText('test')
+def call() {
+  
+  def t = new Task3()
+  t.printText('test')
+  
+}
