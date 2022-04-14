@@ -19,10 +19,10 @@ def call() {
           echo 'Env var 2'
         }
 
-        post {
-            always { 
-                echo 'POST'
-            }
-        }
+//         post {
+//             always { 
+//                 echo 'POST'
+//             }
+//         }
     }
 }
